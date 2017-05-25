@@ -13,7 +13,6 @@ describe Player do
   end
 
   it 'reduces hitpoint of player when attacked' do
-    player1.attack(player2)
     expect { player2.receive_damage }.to change { player2.hit_points }.by(-10)
   end
 
