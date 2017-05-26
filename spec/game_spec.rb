@@ -12,5 +12,15 @@ describe Game do
     game.attack(player_2)
   end
 
+  describe '#current_round' do
+    it 'first round in game starts with Player 1' do
+      expect(game.current_round).to eq player_1
+    end
+
+    it 'switches round to Player 2' do
+      game.switch_round
+      expect(game.current_round).to eq player_2
+    end
+  end
 
 end
