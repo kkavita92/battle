@@ -10,4 +10,9 @@ feature 'View hit points of players' do
     sign_in_and_play
     expect(page).to have_content 'Prabu: 100HP'
   end
+
+  scenario 'Print hit points of Player 1' do
+    sign_in_and_play
+    expect(page).to have_content 'Kavita: 100HP'
+  end
 end
