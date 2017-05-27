@@ -1,5 +1,19 @@
-You attacked <%= @game.opponent.name %>! <%= @game.opponent.name %>: <%= @game.opponent.hit_points %>HP
+<% if @game.player1.hit_points <= 0 || @game.player2.hit_points <= 0 %>
+  <h1>GAME OVER!!!</h1>
+  <h2><%= "#{@game.player1.hit_points == 0 ? @game.player2.name : @game.player1.name} WINS!" %>
+  <br>
+  <form method="get" action="/">
+    <button type="submit">NEW GAME</button>
+  </form>
 
+<% else %>
+
+You attacked <%= @game.opponent.name %>!
+<br>
+<%= @game.opponent.name %>: <%= @game.opponent.hit_points %>HP
+<p>
 <form action="/switch_round" method="post">
   <input type="submit" value="OK">
 </form>
+
+<% end %>

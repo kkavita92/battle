@@ -15,7 +15,7 @@ class Game
   end
 
   def attack(player)
-    player.receive_damage
+    player.receive_damage(random_damage)
   end
 
   def opponent
@@ -27,4 +27,9 @@ class Game
   def opposite(current_player)
     current_player == @player1 ? @player2 : @player1
   end
+
+  def random_damage
+    rand(20)
+  end
+
 end
