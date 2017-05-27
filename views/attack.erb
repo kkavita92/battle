@@ -1,5 +1,5 @@
-You attacked <%= @game.player2.name %>! <%= @game.player2.name %>: <%= @game.player2.hit_points %>HP
+You attacked <%= @game.opponent.name %>! <%= @game.opponent.name %>: <%= @game.opponent.hit_points %>HP
 
-<form action="/play">
+<form action="/switch_round" method="post">
   <input type="submit" value="OK">
 </form>

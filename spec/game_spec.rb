@@ -14,13 +14,18 @@ describe Game do
 
   describe '#current_round' do
     it 'first round in game starts with Player 1' do
-      expect(game.current_round).to eq player_1
+      expect(game.current_turn).to eq player_1
     end
 
     it 'switches round to Player 2' do
       game.switch_round
-      expect(game.current_round).to eq player_2
+      expect(game.current_turn).to eq player_2
     end
   end
+
+    it 'works out the opponent in each round' do
+      game.switch_round
+      expect(game.opponent).to eq player_1
+    end
 
 end
