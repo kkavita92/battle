@@ -1,7 +1,5 @@
 # Battle 
 
-## Description 
-
 Basic two-player game built on Week 3 of Makers Academy to learn how to setup and use Sinatra. 
 
 ## Technologies Used
